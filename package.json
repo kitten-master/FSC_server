@@ -1,0 +1,22 @@
+{
+  "name": "fsc_server",
+  "version": "1.0.0",
+  "description": "futsal community",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitten-master/FSC_server.git"
+  },
+  "author": "kitten_master",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kitten-master/FSC_server/issues"
+  },
+  "homepage": "https://github.com/kitten-master/FSC_server#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
