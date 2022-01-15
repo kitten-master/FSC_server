@@ -1,6 +1,25 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const cors=require('cors');
+const bodyParser = require('body-parser');
 
-app.listen(3000,function(){
-    console.log("server start");
+
+const registerRouter = require('./routes/user');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors());
+
+app.use('/auth',registerRouter);
+
+app.get("/",(req,res)=>{
+    console.log(req.body);
+    res.send("sex");
 });
+app.listen(3000, function () {
+    console.log("start!! express server on port 3000")
+});
+
+
+module.exports = app;
+
