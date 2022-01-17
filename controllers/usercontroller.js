@@ -59,3 +59,7 @@ exports.loginProcess = (req,res) => {
         } 
     });
 }
+
+exports.userVerifyTokenTest = (req,res) => {
+    res.send("success");
+}
