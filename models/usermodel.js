@@ -78,7 +78,7 @@ exports.checkUser = (data,cb) => {
 }
 
 /**
- * 
+ * 로그인 성공시 토큰을 발행한다.
  * @param {*} data : input data
  * @param {*} cb : token call back
  */
