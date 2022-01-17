@@ -25,5 +25,28 @@ module.exports = {
             });
         }
         next();
+    },
+
+    verifyToken : (req, res, next) => {
+        const authHeader = req.headers['authorization'];
+        const token = authHeader && authHeader.split(" ")[1];
+        if(token){
+            jwt.verify(token,'SECRETKEY',(error,user)=>{
+                if(error){
+                    return res.status(401).send({
+                        message : "token is not Invalid"
+                    });
+                }
+                req.user=user;
+                next();
+            });
+             
+        }
+        else{
+            res.status(401).send({
+                message:'no have token'
+            });
+        }
     }
+    
 }
